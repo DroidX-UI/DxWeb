@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Suspense, useEffect } from "react";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
@@ -30,6 +30,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Help" element={<Help />} />
           <Route path="/DevicePage" element={<DevicePage />} />
+          <Route path="/*" element={<Navigate to="/"/>} />
         </Routes>
         <StuckedSomewhere />
         <Footer />
